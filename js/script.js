@@ -1,25 +1,38 @@
-
 const btnAbrir = document.getElementById("btnAbrir");
 const portada = document.getElementById("portada");
 const contenido = document.getElementById("contenido");
+const huellitas = document.getElementById("huellitasTransicion");
 
 btnAbrir.addEventListener("click", function () {
 
-    portada.style.transition = "opacity 0.8s ease";
-    portada.style.opacity = "0";
+    // Evitar doble clic
+    btnAbrir.disabled = true;
 
+    // Mostrar huellitas
+    huellitas.classList.add("activa");
+
+    // Esperar a que termine la animación
     setTimeout(function () {
 
-        portada.style.display = "none";
+        portada.style.transition = "opacity 0.8s ease";
+        portada.style.opacity = "0";
 
-        contenido.classList.remove("oculto");
-        contenido.classList.add("mostrar");
+        setTimeout(function () {
 
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
+            portada.style.display = "none";
 
-    }, 800);
+            contenido.classList.remove("oculto");
+            contenido.classList.add("mostrar");
+
+            huellitas.classList.remove("activa");
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }, 800);
+
+    }, 2300);
 
 });
