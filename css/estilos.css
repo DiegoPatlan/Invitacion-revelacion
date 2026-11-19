@@ -1047,6 +1047,7 @@ button:hover,
 #familia {
     position: relative;
     overflow: hidden;
+
 }
 
 .decoracion-venadito {
@@ -1054,7 +1055,29 @@ button:hover,
     width: 300px;
     height: auto;
     right: -220px;
-    top: 15px;
+    top: -280px;
+    z-index: 3;
+    pointer-events: none;
+    animation: venaditoAsoma 4s ease-in-out infinite;
+}
+
+/* CONTENEDOR NUESTRA FAMILIA */
+#familia {
+    position: relative;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px 15px;
+    overflow: hidden;
+}
+
+/* Venadito asomándose desde la derecha */
+.decoracion-venadito {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    right: -220px;
+    top: -280px;
     z-index: 3;
     pointer-events: none;
     animation: venaditoAsoma 4s ease-in-out infinite;
@@ -1076,7 +1099,7 @@ button:hover,
     .decoracion-venadito {
         width: 150px;
         right: -100px;
-        top: 10px;
+        top: -20px;
     }
 }
 
