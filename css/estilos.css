@@ -1037,7 +1037,7 @@ button:hover,
 /* CONTENEDOR NUESTRA FAMILIA */
 #familia {
     position: relative;
-    height: 1250px;
+
     max-width: 850px;
     margin-left: auto;
     margin-right: auto;
@@ -1048,7 +1048,7 @@ button:hover,
 
 @media (max-width: 600px) {
     #familia {
-        height: 1100px;
+        height: 1250px;
     }
 }
 
