@@ -1376,28 +1376,45 @@ button:hover,
     border-radius: 18px 7px 18px 7px;
 }
 
-/* BOTÓN DE MÚSICA */
+/* REPRODUCTOR MUSICAL VINTAGE */
+
 .boton-musica {
     position: fixed;
-    right: 20px;
-    bottom: 20px;
-    width: 48px;
-    height: 48px;
-    border: 1px solid rgba(138, 114, 92, 0.3);
+    right: 25px;
+    bottom: 25px;
+    width: 65px;
+    height: 65px;
+    border: 3px solid #D9C5A9;
     border-radius: 50%;
-    background: var(--blanco);
-    color: var(--cafe);
-    font-size: 25px;
+    background: linear-gradient(145deg, #9B8066, #624B38);
+    color: #FFF8EC;
+    font-size: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    z-index: 1000;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    box-shadow:
+        0 5px 15px rgba(73, 52, 35, 0.25),
+        inset 0 2px 5px rgba(255, 255, 255, 0.2);
+    transition: all 0.35s ease;
+}
+
+.boton-musica:hover {
+    transform: scale(1.12);
+    box-shadow: 0 8px 25px rgba(73, 52, 35, 0.35);
+}
+
+.boton-musica:active {
+    transform: scale(0.94);
 }
 
 .boton-musica.musica-activa {
-    animation: girarMusica 4s linear infinite;
+    animation: discoGirando 5s linear infinite;
+    background: linear-gradient(145deg, #A88A6D, #72543D);
 }
 
-@keyframes girarMusica {
+@keyframes discoGirando {
     from {
         transform: rotate(0deg);
     }
@@ -1409,9 +1426,10 @@ button:hover,
 
 @media (max-width: 600px) {
     .boton-musica {
-        width: 43px;
-        height: 43px;
-        right: 12px;
-        bottom: 12px;
+        width: 55px;
+        height: 55px;
+        right: 16px;
+        bottom: 18px;
+        font-size: 25px;
     }
 }
