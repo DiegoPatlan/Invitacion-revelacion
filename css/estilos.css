@@ -1100,8 +1100,8 @@ button:hover,
 @media (max-width: 600px) {
     .decoracion-rama-evento {
         width: 175px;
-        right: -110px;
-        bottom: -20px;
+        right: -400px;
+        bottom: -30px;
     }
 }
 
