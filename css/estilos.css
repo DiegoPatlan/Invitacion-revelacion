@@ -547,6 +547,23 @@ button:hover,
     }
 }
 
+/* AJUSTES DEL GATITO PARA CELULAR */
+@media (max-width: 600px) {
+
+    .gato-bienvenida {
+        width: 100px;
+        height: 100px;
+        top: 10px;
+        left: 10px;
+        padding: 4px;
+    }
+
+    .brillo-gatito {
+        font-size: calc(var(--tamano) * 0.8);
+    }
+
+}
+
 /* =========================================
    PANTALLAS GRANDES
 ========================================= */

@@ -303,12 +303,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 (posicion.top + posicion.height / 2 - 15) + "px";
 
             brillo.style.setProperty("--tamano", (10 + Math.random() * 14) + "px");
-            brillo.style.setProperty("--duracion", (2.5 + Math.random() * 2) + "s");
+            brillo.style.setProperty("--duracion", (6 + Math.random() * 4) + "s");
             brillo.style.setProperty("--movimiento", (Math.random() * 180 - 90) + "px");
 
             document.body.appendChild(brillo);
 
-            setTimeout(() => brillo.remove(), 5000);
+            setTimeout(() => brillo.remove(), 11000);
         }
     }
 })();
