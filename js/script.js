@@ -23,6 +23,13 @@ btnAbrir.addEventListener("click", function () {
 
             contenido.classList.remove("oculto");
             contenido.classList.add("mostrar");
+            const animalitos = document.querySelector(".animalitos-centro");
+
+            if (animalitos) {
+                setTimeout(function () {
+                    animalitos.classList.add("aparecer");
+                }, 300);
+            }
 
             huellitas.classList.remove("activa");
 
@@ -185,6 +192,84 @@ document.addEventListener("DOMContentLoaded", function () {
 
     elementosUbicacion.forEach((elemento) => {
         observadorUbicacion.observe(elemento);
+    });
+
+});
+
+/* ANIMACIONES AL DESPLAZARSE - PREDICCIÓN */
+document.addEventListener("DOMContentLoaded", function () {
+
+    const elementosPrediccion = document.querySelectorAll(
+        "#prediccion [class*='anim-prediccion-']"
+    );
+
+    const observadorPrediccion = new IntersectionObserver((entradas) => {
+
+        entradas.forEach((entrada) => {
+
+            if (entrada.isIntersecting) {
+                entrada.target.classList.add("visible");
+                observadorPrediccion.unobserve(entrada.target);
+            }
+
+        });
+
+    }, { threshold: 0.2 });
+
+    elementosPrediccion.forEach((elemento) => {
+        observadorPrediccion.observe(elemento);
+    });
+
+});
+
+/* ANIMACIONES AL DESPLAZARSE - CONFIRMACIÓN */
+document.addEventListener("DOMContentLoaded", function () {
+
+    const elementosConfirmacion = document.querySelectorAll(
+        "#confirmacion [class*='anim-confirmacion-']"
+    );
+
+    const observadorConfirmacion = new IntersectionObserver((entradas) => {
+
+        entradas.forEach((entrada) => {
+
+            if (entrada.isIntersecting) {
+                entrada.target.classList.add("visible");
+                observadorConfirmacion.unobserve(entrada.target);
+            }
+
+        });
+
+    }, { threshold: 0.2 });
+
+    elementosConfirmacion.forEach((elemento) => {
+        observadorConfirmacion.observe(elemento);
+    });
+
+});
+
+/* ANIMACIONES AL DESPLAZARSE - PIE DE INVITACIÓN */
+document.addEventListener("DOMContentLoaded", function () {
+
+    const elementosPie = document.querySelectorAll(
+        ".pie [class*='anim-pie-']"
+    );
+
+    const observadorPie = new IntersectionObserver((entradas) => {
+
+        entradas.forEach((entrada) => {
+
+            if (entrada.isIntersecting) {
+                entrada.target.classList.add("visible");
+                observadorPie.unobserve(entrada.target);
+            }
+
+        });
+
+    }, { threshold: 0.2 });
+
+    elementosPie.forEach((elemento) => {
+        observadorPie.observe(elemento);
     });
 
 });

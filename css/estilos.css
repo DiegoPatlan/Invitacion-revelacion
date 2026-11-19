@@ -1884,3 +1884,183 @@ button:hover,
 .anim-ubicacion-6.visible {
     transition-delay: 0.45s;
 }
+
+/* ANIMACIONES AL DESPLAZARSE - PREDICCIÓN */
+
+.anim-prediccion-1,
+.anim-prediccion-2,
+.anim-prediccion-3,
+.anim-prediccion-4,
+.anim-prediccion-5,
+.anim-prediccion-6 {
+    opacity: 0;
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.anim-prediccion-1 {
+    transform: translateY(15px);
+}
+
+.anim-prediccion-2 {
+    transform: scale(0.9);
+}
+
+.anim-prediccion-3 {
+    transform: translateY(20px);
+}
+
+.anim-prediccion-4 {
+    transform: translateX(-35px);
+}
+
+.anim-prediccion-5 {
+    transform: translateX(35px);
+}
+
+.anim-prediccion-6 {
+    transform: translateY(20px);
+}
+
+.anim-prediccion-1.visible,
+.anim-prediccion-2.visible,
+.anim-prediccion-3.visible,
+.anim-prediccion-4.visible,
+.anim-prediccion-5.visible,
+.anim-prediccion-6.visible {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+}
+
+.anim-prediccion-2.visible {
+    transition-delay: 0.15s;
+}
+
+.anim-prediccion-3.visible {
+    transition-delay: 0.3s;
+}
+
+.anim-prediccion-4.visible {
+    transition-delay: 0.15s;
+}
+
+.anim-prediccion-5.visible {
+    transition-delay: 0.3s;
+}
+
+.anim-prediccion-6.visible {
+    transition-delay: 0.45s;
+}
+
+/* ANIMACIONES AL DESPLAZARSE - CONFIRMACIÓN */
+
+.anim-confirmacion-1,
+.anim-confirmacion-2,
+.anim-confirmacion-3,
+.anim-confirmacion-4 {
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.anim-confirmacion-1 {
+    transform: translateY(15px);
+}
+
+.anim-confirmacion-2 {
+    transform: scale(0.9);
+}
+
+.anim-confirmacion-3 {
+    transform: translateY(20px);
+}
+
+.anim-confirmacion-4 {
+    transform: translateY(35px);
+}
+
+.anim-confirmacion-1.visible,
+.anim-confirmacion-2.visible,
+.anim-confirmacion-3.visible,
+.anim-confirmacion-4.visible {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+}
+
+.anim-confirmacion-2.visible {
+    transition-delay: 0.15s;
+}
+
+.anim-confirmacion-3.visible {
+    transition-delay: 0.3s;
+}
+
+.anim-confirmacion-4.visible {
+    transition-delay: 0.4s;
+}
+
+/* ANIMACIONES AL DESPLAZARSE - PIE DE INVITACIÓN */
+
+.anim-pie-1,
+.anim-pie-2,
+.anim-pie-3 {
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.anim-pie-1 {
+    transform: translateY(25px) scale(0.85);
+}
+
+.anim-pie-2 {
+    transform: translateY(20px);
+}
+
+.anim-pie-3 {
+    transform: scale(0.9);
+}
+
+.anim-pie-1.visible,
+.anim-pie-2.visible,
+.anim-pie-3.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.anim-pie-2.visible {
+    transition-delay: 0.25s;
+}
+
+.anim-pie-3.visible {
+    transition-delay: 0.5s;
+}
+
+/* ANIMACIÓN DE ANIMALITOS DEL CENTRO */
+
+.animalitos-centro {
+    animation: animalitosFlotando 3s ease-in-out infinite;
+    transform-origin: center center;
+}
+
+@keyframes animalitosFlotando {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(1deg);
+    }
+}
+
+/* APARICIÓN DE ANIMALITOS AL ABRIR LA INVITACIÓN */
+
+.animalitos-centro {
+    opacity: 0;
+    transform: translateY(25px) scale(0.85);
+    transition: opacity 1.3s ease, transform 1.3s ease;
+}
+
+.animalitos-centro.aparecer {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
