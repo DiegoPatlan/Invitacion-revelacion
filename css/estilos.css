@@ -869,20 +869,34 @@ button:hover,
 }
 
 /* Adaptación para celulares */
+/* Adaptación para celulares */
 @media (max-width: 600px) {
 
     .padres-fotos {
-        gap: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 15px;
+        flex-wrap: nowrap;
+    }
+
+    .foto-padre {
+        width: 50%;
     }
 
     .foto-padre img {
-        width: 135px;
-        height: 135px;
+        width: 115px;
+        height: 115px;
     }
 
-    .ultrasonido-bebe img {
-        width: 185px;
-        height: 185px;
+    .ultrasonido-bebe {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .ultrasonido-bebe>img {
+        width: 150px;
+        height: 150px;
     }
 
 }
