@@ -30,6 +30,43 @@ document.querySelectorAll('input[name="asistencia"]').forEach((opcion) => {
 // Estado inicial
 actualizarAcompanantes();
 
+// CELEBRACIÓN DE CONFIRMACIÓN EXITOSA
+function lanzarCelebracion() {
+    const figuras = ["💗", "💕", "🎈", "✨", "⭐", "🤎"];
+
+    for (let i = 0; i < 30; i++) {
+        const particula = document.createElement("span");
+
+        particula.className = "particula-celebracion";
+        particula.textContent =
+            figuras[Math.floor(Math.random() * figuras.length)];
+
+        particula.style.setProperty(
+            "--posicion-x",
+            Math.random() * 100 + "vw"
+        );
+
+        particula.style.setProperty(
+            "--tamano",
+            (18 + Math.random() * 18) + "px"
+        );
+
+        particula.style.setProperty(
+            "--duracion",
+            (3 + Math.random() * 2) + "s"
+        );
+
+        particula.style.animationDelay =
+            (Math.random() * 0.8) + "s";
+
+        document.body.appendChild(particula);
+
+        setTimeout(() => {
+            particula.remove();
+        }, 6000);
+    }
+}
+
 // Guardar confirmación en Supabase
 formConfirmacion.addEventListener("submit", async function (event) {
     event.preventDefault();
@@ -78,6 +115,8 @@ formConfirmacion.addEventListener("submit", async function (event) {
 
         mensajeConfirmacion.textContent =
             "¡Muchas gracias! Tu respuesta se registró correctamente. 🤎";
+
+        lanzarCelebracion();
 
         formConfirmacion.reset();
         actualizarAcompanantes();

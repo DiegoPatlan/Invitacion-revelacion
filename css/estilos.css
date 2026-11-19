@@ -2064,3 +2064,35 @@ button:hover,
     opacity: 1;
     transform: translateY(0) scale(1);
 }
+
+/* CELEBRACIÓN AL ENVIAR CONFIRMACIÓN */
+
+.particula-celebracion {
+    position: fixed;
+    bottom: -50px;
+    left: var(--posicion-x);
+    z-index: 99999;
+    pointer-events: none;
+    font-size: var(--tamano);
+    animation: subirCelebracion var(--duracion) ease-out forwards;
+}
+
+@keyframes subirCelebracion {
+    0% {
+        opacity: 0;
+        transform: translateY(0) rotate(0deg) scale(0.5);
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-110vh) rotate(360deg) scale(1.2);
+    }
+}
