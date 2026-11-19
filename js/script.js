@@ -273,3 +273,42 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+(() => {
+    const gato = document.querySelector(".gato-bienvenida");
+
+    if (!gato) return;
+
+    gato.addEventListener("animationstart", () => {
+        setTimeout(lanzarBrillitos, 1800);
+    });
+
+    gato.addEventListener("animationiteration", () => {
+        setTimeout(lanzarBrillitos, 1800);
+    });
+
+    function lanzarBrillitos() {
+        const posicion = gato.getBoundingClientRect();
+
+        for (let i = 0; i < 16; i++) {
+            const brillo = document.createElement("span");
+
+            brillo.className = "brillo-gatito";
+            brillo.textContent = Math.random() > 0.5 ? "✦" : "✨";
+
+            brillo.style.left =
+                (posicion.left + posicion.width / 2 + Math.random() * 70 - 35) + "px";
+
+            brillo.style.top =
+                (posicion.top + posicion.height / 2 - 15) + "px";
+
+            brillo.style.setProperty("--tamano", (10 + Math.random() * 14) + "px");
+            brillo.style.setProperty("--duracion", (2.5 + Math.random() * 2) + "s");
+            brillo.style.setProperty("--movimiento", (Math.random() * 180 - 90) + "px");
+
+            document.body.appendChild(brillo);
+
+            setTimeout(() => brillo.remove(), 5000);
+        }
+    }
+})();
