@@ -1495,3 +1495,27 @@ button:hover,
         font-size: 35px;
     }
 }
+
+/* NUBES EN LA SECCIÓN DE UBICACIÓN */
+.decoracion-nubes-ubicacion {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 130px;
+    object-fit: contain;
+    object-position: top center;
+    opacity: 0.45;
+    filter: blur(1.5px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+@media (max-width: 600px) {
+    .decoracion-nubes-ubicacion {
+        top: 5px;
+        height: 85px;
+        opacity: 0.4;
+        filter: blur(1px);
+    }
+}
