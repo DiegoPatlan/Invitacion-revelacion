@@ -297,6 +297,7 @@ button:hover,
     gap: 25px;
     margin-top: 40px;
     text-align: center;
+    transform: translateX(-15px);
 }
 
 .datos-evento>div {
