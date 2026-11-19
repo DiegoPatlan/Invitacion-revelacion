@@ -1041,9 +1041,8 @@ button:hover,
     }
 }
 
-/* =========================================
-   VENADITO - NUESTRA FAMILIA
-========================================= */
+
+/* Venadito asomándose desde la derecha */
 
 #familia {
     position: relative;
@@ -1065,7 +1064,7 @@ button:hover,
 
     0%,
     100% {
-        transform: translateX(25px);
+        transform: translateX(45px);
     }
 
     50% {
@@ -1073,21 +1072,11 @@ button:hover,
     }
 }
 
-/* CELULARES */
 @media (max-width: 600px) {
     .decoracion-venadito {
-        width: 145px;
-        right: -100px;
+        width: 150px;
+        right: -105px;
         top: 10px;
-    }
-}
-
-/* CELULARES PEQUEÑOS */
-@media (max-width: 380px) {
-    .decoracion-venadito {
-        width: 120px;
-        right: -85px;
-        top: 8px;
     }
 }
 
@@ -1110,9 +1099,9 @@ button:hover,
 
 @media (max-width: 600px) {
     .decoracion-rama-evento {
-        width: 200px;
-        right: -130px;
-        bottom: 1px;
+        width: 175px;
+        right: -110px;
+        bottom: 5px;
     }
 }
 
