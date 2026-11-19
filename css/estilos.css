@@ -547,6 +547,48 @@ button:hover,
     }
 }
 
+/* GATITO NEGRO - NOS ACOMPAÑAS */
+.gato-negrito {
+    position: absolute;
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    top: -20px;
+    right: -15px;
+    z-index: 5;
+
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+}
+
+/* CELULAR */
+@media (max-width: 600px) {
+    .gato-negrito {
+        width: 85px;
+        top: -12px;
+        right: -8px;
+    }
+}
+
+.gato-negrito {
+    animation: suavizarGato 1.5s ease-in-out infinite;
+}
+
+@keyframes suavizarGato {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
 /* AJUSTES DEL GATITO PARA CELULAR */
 @media (max-width: 600px) {
 
