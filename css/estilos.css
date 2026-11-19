@@ -1037,12 +1037,12 @@ button:hover,
 /* CONTENEDOR NUESTRA FAMILIA */
 #familia {
     position: relative;
+    height: 1250px;
     max-width: 850px;
     margin-left: auto;
     margin-right: auto;
-    padding: 25px 15px;
+    padding: 25px 15px 0;
     overflow: hidden;
-    padding-bottom: -10px;
     margin-bottom: 0;
 }
 
@@ -1301,8 +1301,8 @@ button:hover,
 .foto-futuros-papas {
     width: 85%;
     max-width: 420px;
-    margin: 30px auto 10px;
-    padding: 9px;
+    margin: 30px auto 0;
+    padding: 9px 9px 4px;
     background: var(--blanco);
     border-radius: 25px 10px 25px 10px;
     box-shadow: 0 8px 25px rgba(100, 75, 50, 0.15);
