@@ -34,10 +34,11 @@ actualizarAcompanantes();
 function lanzarCelebracion() {
     const figuras = ["💗", "💕", "🎈", "✨", "⭐", "🤎"];
 
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 36; i++) {
         const particula = document.createElement("span");
 
         particula.className = "particula-celebracion";
+
         particula.textContent =
             figuras[Math.floor(Math.random() * figuras.length)];
 
@@ -48,22 +49,27 @@ function lanzarCelebracion() {
 
         particula.style.setProperty(
             "--tamano",
-            (18 + Math.random() * 18) + "px"
+            (18 + Math.random() * 20) + "px"
         );
 
         particula.style.setProperty(
             "--duracion",
-            (3 + Math.random() * 2) + "s"
+            (3.5 + Math.random() * 2.5) + "s"
+        );
+
+        particula.style.setProperty(
+            "--movimiento",
+            (Math.random() * 160 - 80) + "px"
         );
 
         particula.style.animationDelay =
-            (Math.random() * 0.8) + "s";
+            (Math.random() * 1.2) + "s";
 
         document.body.appendChild(particula);
 
         setTimeout(() => {
             particula.remove();
-        }, 6000);
+        }, 7500);
     }
 }
 

@@ -2069,30 +2069,33 @@ button:hover,
 
 .particula-celebracion {
     position: fixed;
-    bottom: -50px;
+    bottom: -60px;
     left: var(--posicion-x);
     z-index: 99999;
     pointer-events: none;
     font-size: var(--tamano);
-    animation: subirCelebracion var(--duracion) ease-out forwards;
+    opacity: 0;
+    animation: lluviaCelebracion var(--duracion) ease-out forwards;
+    will-change: transform, opacity;
 }
 
-@keyframes subirCelebracion {
+@keyframes lluviaCelebracion {
     0% {
         opacity: 0;
-        transform: translateY(0) rotate(0deg) scale(0.5);
+        transform: translate(0, 0) rotate(0deg) scale(0.4);
     }
 
     15% {
         opacity: 1;
+        transform: translate(var(--movimiento), -15vh) rotate(40deg) scale(1);
     }
 
-    80% {
+    70% {
         opacity: 1;
     }
 
     100% {
         opacity: 0;
-        transform: translateY(-110vh) rotate(360deg) scale(1.2);
+        transform: translate(calc(var(--movimiento) * -1), -110vh) rotate(360deg) scale(0.8);
     }
 }
