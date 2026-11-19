@@ -1126,7 +1126,7 @@ button:hover,
     .decoracion-tendedero {
         width: 155px;
         top: 5px;
-        left: 40%;
+        left: 35%;
         transform: translateX(-50%);
     }
 }
