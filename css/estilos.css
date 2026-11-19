@@ -1041,25 +1041,9 @@ button:hover,
     }
 }
 
-/* Venadito asomándose desde la derecha */
-
-#familia {
-    position: relative;
-    overflow: hidden;
-}
-
-.decoracion-venadito {
-    position: absolute;
-    width: 145px;
-    height: auto;
-    right: -15px;
-    top: 35%;
-    z-index: 1;
-    pointer-events: none;
-    animation: venaditoAsoma 4s ease-in-out infinite;
-}
-
-/* Venadito asomándose desde la derecha */
+/* =========================================
+   VENADITO - NUESTRA FAMILIA
+========================================= */
 
 #familia {
     position: relative;
@@ -1081,7 +1065,7 @@ button:hover,
 
     0%,
     100% {
-        transform: translateX(45px);
+        transform: translateX(25px);
     }
 
     50% {
@@ -1089,11 +1073,21 @@ button:hover,
     }
 }
 
+/* CELULARES */
 @media (max-width: 600px) {
     .decoracion-venadito {
-        width: 150px;
-        right: -155px;
+        width: 145px;
+        right: -100px;
         top: 10px;
+    }
+}
+
+/* CELULARES PEQUEÑOS */
+@media (max-width: 380px) {
+    .decoracion-venadito {
+        width: 120px;
+        right: -85px;
+        top: 8px;
     }
 }
 
