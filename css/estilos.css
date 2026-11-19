@@ -869,7 +869,6 @@ button:hover,
 }
 
 /* Adaptación para celulares */
-/* Adaptación para celulares */
 @media (max-width: 600px) {
 
     .padres-fotos {
@@ -918,6 +917,36 @@ button:hover,
         width: 95px;
         left: 10px;
         bottom: 12px;
+    }
+}
+
+/* Animalitos decorativos de la portada */
+
+.decoracion-animalitos-portada {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    left: 70px;
+    bottom: 20px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+    .decoracion-animalitos-portada {
+        width: 85px;
+        left: 8px;
+        bottom: 30px;
+    }
+}
+
+/* Celulares pequeños */
+@media (max-width: 380px) {
+    .decoracion-animalitos-portada {
+        width: 70px;
+        left: 5px;
+        bottom: 10px;
     }
 }
 
