@@ -1075,7 +1075,7 @@ button:hover,
 @media (max-width: 600px) {
     .decoracion-venadito {
         width: 150px;
-        right: -105px;
+        right: -90px;
         top: 10px;
     }
 }
@@ -1100,7 +1100,7 @@ button:hover,
 @media (max-width: 600px) {
     .decoracion-rama-evento {
         width: 175px;
-        right: -400px;
+        right: -90px;
         bottom: -30px;
     }
 }
