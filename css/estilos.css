@@ -900,25 +900,6 @@ button:hover,
 
 }
 
-/* Animalitos decorativos de la portada */
-
-.decoracion-animalitos-portada {
-    position: absolute;
-    width: 150px;
-    height: auto;
-    left: 70px;
-    bottom: 20px;
-    z-index: 2;
-    pointer-events: none;
-}
-
-@media (max-width: 600px) {
-    .decoracion-animalitos-portada {
-        width: 95px;
-        left: 10px;
-        bottom: 12px;
-    }
-}
 
 /* Animalitos decorativos de la portada */
 
@@ -936,8 +917,8 @@ button:hover,
 @media (max-width: 600px) {
     .decoracion-animalitos-portada {
         width: 85px;
-        left: 26px;
-        bottom: 202px;
+        left: 20px;
+        bottom: 140px;
     }
 }
 
@@ -945,8 +926,8 @@ button:hover,
 @media (max-width: 380px) {
     .decoracion-animalitos-portada {
         width: 70px;
-        left: 5px;
-        bottom: 10px;
+        left: 20px;
+        bottom: 100px;
     }
 }
 
