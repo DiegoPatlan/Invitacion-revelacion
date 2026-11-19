@@ -1,0 +1,1417 @@
+/* =========================================
+   INVITACIÓN - ESTILO BOSQUE ELEGANTE
+========================================= */
+
+:root {
+    --crema: #F8F3EB;
+    --beige: #E8DAC7;
+    --cafe: #8A725C;
+    --texto: #665747;
+    --verde: #89927A;
+    --blanco: #FFFDF9;
+    --rosa: #E8C8C1;
+    --sombra: rgba(102, 87, 71, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--texto);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.7;
+    background:
+        radial-gradient(ellipse at 5% 10%, rgba(232, 218, 199, 0.55), transparent 35%),
+        radial-gradient(ellipse at 95% 30%, rgba(137, 146, 122, 0.13), transparent 32%),
+        radial-gradient(ellipse at 15% 75%, rgba(232, 200, 193, 0.17), transparent 35%),
+        var(--crema);
+    background-attachment: fixed;
+}
+
+button,
+a {
+    font-family: inherit;
+}
+
+.oculto {
+    display: none;
+}
+
+/* =========================================
+   PORTADA
+========================================= */
+
+.portada {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    overflow: hidden;
+
+    background:
+        radial-gradient(ellipse at 15% 20%, rgba(232, 218, 199, 0.7), transparent 40%),
+        radial-gradient(ellipse at 85% 80%, rgba(137, 146, 122, 0.16), transparent 40%),
+        var(--crema);
+}
+
+.sobre {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 560px;
+    padding: 65px 35px;
+    text-align: center;
+
+    background: rgba(255, 253, 249, 0.78);
+    border: 1px solid rgba(138, 114, 92, 0.25);
+    border-radius: 45px 45px 18px 45px;
+
+    box-shadow: 0 15px 45px var(--sombra);
+}
+
+.sobre::before {
+    content: "";
+    position: absolute;
+    inset: 10px;
+    border: 1px solid rgba(138, 114, 92, 0.14);
+    border-radius: 37px 37px 12px 37px;
+    pointer-events: none;
+}
+
+.sobre p {
+    position: relative;
+    color: var(--verde);
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.sobre h1 {
+    position: relative;
+    margin: 24px 0;
+    color: var(--cafe);
+    font-size: clamp(32px, 6vw, 48px);
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+/* =========================================
+   BOTONES
+========================================= */
+
+button,
+#btnConfirmar {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 14px 32px;
+
+    color: var(--blanco);
+    background: var(--verde);
+
+    border: 1px solid rgba(102, 87, 71, 0.1);
+    border-radius: 40px;
+
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    cursor: pointer;
+
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover,
+#btnConfirmar:hover {
+    background: var(--cafe);
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   CONTENIDO GENERAL
+========================================= */
+
+.contenido {
+    width: 100%;
+    padding: 35px 20px;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.contenido.mostrar {
+    opacity: 1;
+}
+
+.seccion {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    width: min(100%, 900px);
+    margin: 65px auto;
+    padding: 65px 35px;
+
+    text-align: center;
+
+    background: rgba(255, 253, 249, 0.48);
+    border: 1px solid rgba(138, 114, 92, 0.16);
+    border-radius: 55px 18px 55px 18px;
+
+    box-shadow: 0 12px 35px rgba(102, 87, 71, 0.045);
+}
+
+/* Borde interior delicado */
+
+.seccion::before {
+    content: "";
+    position: absolute;
+    inset: 9px;
+    z-index: -1;
+
+    border: 1px solid rgba(138, 114, 92, 0.09);
+    border-radius: 46px 12px 46px 12px;
+
+    pointer-events: none;
+}
+
+/* Textos por encima de las decoraciones */
+
+.seccion>*:not(.decoracion) {
+    position: relative;
+    z-index: 2;
+}
+
+.seccion h1,
+.seccion h2 {
+    margin-bottom: 20px;
+    color: var(--cafe);
+    font-weight: normal;
+    line-height: 1.3;
+}
+
+.seccion h2 {
+    font-size: clamp(27px, 4vw, 36px);
+}
+
+.seccion h3 {
+    color: var(--verde);
+    font-size: 19px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.seccion p {
+    font-size: 16px;
+}
+
+/* =========================================
+   BIENVENIDA
+========================================= */
+
+.bienvenida {
+    padding-top: 85px;
+    padding-bottom: 85px;
+    background: rgba(255, 253, 249, 0.65);
+}
+
+.subtitulo {
+    color: var(--verde);
+    font-size: 12px !important;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.bienvenida h1 {
+    font-size: clamp(32px, 5vw, 46px);
+}
+
+.mensaje-bienvenida {
+    max-width: 570px;
+    margin: 20px auto;
+    font-size: 18px !important;
+    line-height: 1.9;
+}
+
+.imagen-bienvenida {
+    min-height: 45px;
+    margin-top: 20px;
+}
+
+/* =========================================
+   CUENTA REGRESIVA
+========================================= */
+
+#cuenta-regresiva {
+    background:
+        radial-gradient(ellipse at 50% 50%, rgba(255, 253, 249, 0.75), transparent 75%),
+        linear-gradient(135deg, #E8DAC7, #F5EEE4);
+}
+
+.temporizador {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.tiempo {
+    min-width: 105px;
+    padding: 15px 12px;
+
+    background: rgba(255, 253, 249, 0.72);
+    border: 1px solid rgba(138, 114, 92, 0.15);
+    border-radius: 28px 12px 28px 12px;
+}
+
+.tiempo span {
+    display: block;
+    color: var(--cafe);
+    font-size: 34px;
+    line-height: 1.3;
+}
+
+.tiempo small {
+    color: var(--verde);
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   DETALLES DEL EVENTO
+========================================= */
+
+#evento {
+    background: rgba(255, 253, 249, 0.65);
+}
+
+.datos-evento {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.datos-evento>div {
+    padding: 20px 10px;
+    border-bottom: 1px solid rgba(138, 114, 92, 0.25);
+}
+
+.datos-evento p {
+    font-size: 15px;
+}
+
+/* =========================================
+   VESTIMENTA
+========================================= */
+
+#vestimenta {
+    background:
+        radial-gradient(ellipse at 80% 20%, rgba(137, 146, 122, 0.13), transparent 45%),
+        rgba(255, 253, 249, 0.5);
+}
+
+/* =========================================
+   UBICACIÓN
+========================================= */
+
+#ubicacion {
+    background: rgba(255, 253, 249, 0.65);
+}
+
+#mapa {
+    width: 100%;
+    min-height: 250px;
+    margin-top: 25px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+/* =========================================
+   CONFIRMACIÓN
+========================================= */
+
+#confirmacion {
+    background:
+        radial-gradient(ellipse at 50% 50%, rgba(232, 200, 193, 0.22), transparent 70%),
+        rgba(255, 253, 249, 0.65);
+}
+
+/* =========================================
+   DECORACIONES
+========================================= */
+
+.decoracion {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    object-fit: contain;
+}
+
+.decoracion-flor {
+    width: 90px;
+    opacity: 0.55;
+}
+
+.flor-izquierda {
+    bottom: 8px;
+    left: -10px;
+}
+
+.flor-derecha {
+    top: 8px;
+    right: -10px;
+}
+
+.decoracion-animal {
+    width: 95px;
+    opacity: 0.85;
+}
+
+.decoracion-estrella {
+    width: 42px;
+    opacity: 0.65;
+}
+
+/* =========================================
+   PIE DE INVITACIÓN
+========================================= */
+
+.pie {
+    padding: 55px 20px 35px;
+    text-align: center;
+    line-height: 2;
+    color: var(--cafe);
+}
+
+.pie img {
+    display: block;
+    margin: 0 auto 25px;
+    object-fit: contain;
+}
+
+.pie p:last-child {
+    color: var(--verde);
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   LOS CUATRO GATITOS
+   Se conserva su recorrido original
+========================================= */
+
+.gatitos-portada {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.gatito {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+
+    offset-path: inset(55px round 10px);
+    offset-rotate: auto;
+
+    animation: recorrerContorno 24s linear infinite;
+}
+
+.siames {
+    animation-delay: 0s;
+}
+
+.gris {
+    animation-delay: -6s;
+}
+
+.negro {
+    animation-delay: -12s;
+}
+
+.atigrado {
+    animation-delay: -18s;
+}
+
+@keyframes recorrerContorno {
+    from {
+        offset-distance: 0%;
+    }
+
+    to {
+        offset-distance: 100%;
+    }
+}
+
+/* =========================================
+   RESPONSIVE - CELULARES
+========================================= */
+
+@media (max-width: 600px) {
+
+    .contenido {
+        padding: 15px 10px;
+    }
+
+    .seccion {
+        width: 100%;
+        margin: 38px auto;
+        padding: 48px 20px;
+
+        border-radius: 38px 14px 38px 14px;
+    }
+
+    .seccion::before {
+        border-radius: 30px 10px 30px 10px;
+    }
+
+    .bienvenida {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .mensaje-bienvenida {
+        font-size: 16px !important;
+    }
+
+    .datos-evento {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 25px;
+    }
+
+    .datos-evento>div {
+        padding: 15px 5px;
+    }
+
+    .temporizador {
+        gap: 10px;
+    }
+
+    .tiempo {
+        min-width: 75px;
+        padding: 13px 8px;
+    }
+
+    .tiempo span {
+        font-size: 27px;
+    }
+
+    .sobre {
+        padding: 50px 22px;
+        border-radius: 35px 35px 15px 35px;
+    }
+
+    .gatito {
+        width: 85px;
+        height: 85px;
+        offset-path: inset(43px round 10px);
+    }
+
+    .decoracion-flor {
+        width: 65px;
+    }
+
+    .decoracion-animal {
+        width: 72px;
+    }
+
+    .decoracion-estrella {
+        width: 30px;
+    }
+
+    #mapa {
+        min-height: 200px;
+    }
+}
+
+/* =========================================
+   PANTALLAS GRANDES
+========================================= */
+
+@media (min-width: 1000px) {
+    .contenido {
+        padding-top: 45px;
+    }
+
+    .seccion {
+        margin-top: 75px;
+        margin-bottom: 75px;
+    }
+}
+
+/* ILUSTRACIÓN CENTRAL */
+.animalitos-centro {
+    display: block;
+    position: relative;
+    z-index: 2;
+    width: min(75%, 230px);
+    max-height: 180px;
+    object-fit: contain;
+    margin: 20px auto 5px;
+}
+
+@media (max-width: 600px) {
+    .animalitos-centro {
+        width: 65%;
+        max-height: 145px;
+        margin: 15px auto 5px;
+    }
+}
+
+/* CÓDIGO DE VESTIMENTA */
+.texto-vestimenta {
+    max-width: 500px;
+    margin: 20px auto;
+    line-height: 1.8;
+}
+
+.vestimenta-color {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.muestra-beige {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: #D8C2A5;
+    border: 5px solid #FFFDF9;
+    box-shadow: 0 4px 15px rgba(100, 75, 50, 0.15);
+}
+
+.vestimenta-color h3 {
+    color: #8A725C;
+    letter-spacing: 5px;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.vestimenta-color p,
+.nota-vestimenta {
+    color: #665747;
+    font-size: 14px;
+}
+
+.nota-vestimenta {
+    margin-top: 25px;
+    font-style: italic;
+}
+
+
+/* UBICACIÓN - DISEÑO ELEGANTE */
+
+.encabezado-ubicacion {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.adorno-ubicacion {
+    display: block;
+    color: var(--verde);
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.encabezado-ubicacion h2 {
+    color: var(--cafe);
+    font-family: Georgia, serif;
+    font-size: clamp(25px, 4vw, 34px);
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.encabezado-ubicacion p {
+    max-width: 480px;
+    margin: auto;
+    line-height: 1.8;
+    color: var(--texto);
+}
+
+.marco-mapa {
+    width: min(100%, 680px);
+    margin: auto;
+    padding: 22px;
+    background: rgba(255, 253, 249, 0.85);
+    border: 1px solid var(--beige);
+    border-radius: 45px 18px 45px 18px;
+    box-shadow: 0 12px 30px rgba(100, 75, 50, 0.10);
+}
+
+.titulo-mapa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.titulo-mapa h3 {
+    color: var(--cafe);
+    font-family: Georgia, serif;
+    font-weight: normal;
+    font-size: 21px;
+    margin: 0;
+}
+
+.titulo-mapa span {
+    font-size: 20px;
+}
+
+.contenedor-mapa {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 28px 12px 28px 12px;
+    border: 4px solid white;
+    box-shadow: 0 5px 16px rgba(100, 75, 50, 0.12);
+}
+
+.contenedor-mapa iframe {
+    display: block;
+    width: 100%;
+    height: 310px;
+}
+
+.boton-mapa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: fit-content;
+    margin: 25px auto 5px;
+    padding: 14px 35px;
+    background: var(--verde);
+    color: white;
+    text-decoration: none;
+    border-radius: 35px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.boton-mapa:hover {
+    background: var(--cafe);
+    transform: translateY(-3px);
+}
+
+.mensaje-ubicacion {
+    margin: 30px auto 10px;
+    color: var(--cafe);
+    font-family: Georgia, serif;
+    font-style: italic;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .marco-mapa {
+        padding: 13px;
+        border-radius: 30px 14px 30px 14px;
+    }
+
+    .contenedor-mapa iframe {
+        height: 250px;
+    }
+
+    .encabezado-ubicacion h2 {
+        font-size: 26px;
+    }
+}
+
+/* FORMULARIO DE CONFIRMACIÓN */
+
+.encabezado-confirmacion {
+    text-align: center;
+    max-width: 550px;
+    margin: 0 auto 30px;
+}
+
+.encabezado-confirmacion h2 {
+    color: var(--cafe);
+    font-family: Georgia, serif;
+    font-size: clamp(27px, 4vw, 35px);
+    font-weight: normal;
+    margin: 15px 0;
+}
+
+.encabezado-confirmacion p {
+    color: var(--texto);
+    line-height: 1.8;
+}
+
+.form-confirmacion {
+    width: min(100%, 550px);
+    margin: auto;
+    padding: 30px;
+    background: rgba(255, 253, 249, 0.85);
+    border: 1px solid var(--beige);
+    border-radius: 40px 18px 40px 18px;
+    box-shadow: 0 10px 25px rgba(100, 75, 50, 0.09);
+    text-align: left;
+}
+
+.campo-confirmacion {
+    margin-bottom: 22px;
+}
+
+.campo-confirmacion>label {
+    display: block;
+    color: var(--cafe);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.campo-confirmacion input[type="text"],
+.campo-confirmacion select,
+.campo-confirmacion textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid var(--beige);
+    border-radius: 14px;
+    background: #FFFDF9;
+    color: var(--texto);
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.campo-confirmacion input:focus,
+.campo-confirmacion select:focus,
+.campo-confirmacion textarea:focus {
+    border-color: var(--verde);
+}
+
+.opciones-asistencia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.opcion-asistencia {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 13px;
+    border: 1px solid var(--beige);
+    border-radius: 14px;
+    background: #FFFDF9;
+    color: var(--texto);
+    cursor: pointer;
+}
+
+.opcion-asistencia input {
+    accent-color: var(--verde);
+}
+
+#btnEnviarConfirmacion {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    background: var(--verde);
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#btnEnviarConfirmacion:hover {
+    background: var(--cafe);
+}
+
+#btnEnviarConfirmacion:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.mensaje-confirmacion {
+    text-align: center;
+    margin-top: 15px;
+    color: var(--verde);
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .form-confirmacion {
+        padding: 20px;
+    }
+
+    .opciones-asistencia {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==============================
+   SECCIÓN NUESTRA FAMILIA
+============================== */
+
+.encabezado-familia {
+    text-align: center;
+    max-width: 550px;
+    margin: 0 auto 35px;
+}
+
+.encabezado-familia h2 {
+    color: var(--cafe);
+    font-size: 30px;
+    font-weight: normal;
+    margin: 15px 0;
+}
+
+.encabezado-familia p {
+    color: var(--texto);
+    line-height: 1.8;
+}
+
+.padres-fotos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 45px;
+    flex-wrap: wrap;
+    margin: 35px auto 20px;
+}
+
+.foto-padre {
+    text-align: center;
+}
+
+.foto-padre img {
+    width: 175px;
+    height: 175px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 6px solid var(--blanco);
+    outline: 2px solid var(--beige);
+    box-shadow: 0 6px 20px rgba(100, 75, 50, 0.13);
+}
+
+.foto-padre h3 {
+    color: var(--cafe);
+    font-weight: normal;
+    margin-top: 18px;
+    font-size: 19px;
+}
+
+.union-familia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    max-width: 180px;
+    margin: 15px auto;
+    color: var(--rosa);
+    font-size: 25px;
+}
+
+.linea-union {
+    height: 1px;
+    background: var(--beige);
+    flex: 1;
+}
+
+.ultrasonido-bebe {
+    text-align: center;
+    margin: 20px auto 0;
+}
+
+.ultrasonido-bebe img {
+    width: 210px;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 7px solid var(--blanco);
+    outline: 2px solid var(--beige);
+    box-shadow: 0 6px 22px rgba(100, 75, 50, 0.15);
+}
+
+.ultrasonido-bebe h3 {
+    color: var(--cafe);
+    font-size: 20px;
+    font-weight: normal;
+    margin: 20px 0 8px;
+}
+
+.ultrasonido-bebe p {
+    color: var(--texto);
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+
+    .padres-fotos {
+        gap: 25px;
+    }
+
+    .foto-padre img {
+        width: 135px;
+        height: 135px;
+    }
+
+    .ultrasonido-bebe img {
+        width: 185px;
+        height: 185px;
+    }
+
+}
+
+/* Animalitos decorativos de la portada */
+
+.decoracion-animalitos-portada {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    left: 70px;
+    bottom: 20px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+@media (max-width: 600px) {
+    .decoracion-animalitos-portada {
+        width: 95px;
+        left: 10px;
+        bottom: 12px;
+    }
+}
+
+/* Osito con globos en bienvenida */
+
+#bienvenida {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Osito con globos llevado por el viento */
+
+.decoracion-ositoglobos {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    right: 15px;
+    bottom: 10px;
+    z-index: 1;
+    pointer-events: none;
+    animation: ositoViento 6s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes ositoViento {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(-12px, -10px) rotate(-5deg);
+    }
+
+    50% {
+        transform: translate(-25px, -25px) rotate(-9deg);
+    }
+
+    75% {
+        transform: translate(-12px, -35px) rotate(-4deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .decoracion-ositoglobos {
+        width: 85px;
+        right: 5px;
+        bottom: 5px;
+    }
+}
+
+/* Osito descendiendo en paracaídas */
+
+#cuenta-regresiva {
+    position: relative;
+    overflow: hidden;
+}
+
+.decoracion-ositoparacaidas {
+    position: absolute;
+    width: 125px;
+    height: auto;
+    right: 15px;
+    top: 5px;
+    z-index: 1;
+    pointer-events: none;
+    animation: ositoDescenso 5s ease-in-out infinite;
+}
+
+@keyframes ositoDescenso {
+    0% {
+        transform: translateY(-12px) rotate(-4deg);
+    }
+
+    50% {
+        transform: translateY(18px) rotate(5deg);
+    }
+
+    100% {
+        transform: translateY(-12px) rotate(-4deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .decoracion-ositoparacaidas {
+        width: 90px;
+        right: 5px;
+        top: 0;
+    }
+}
+
+/* Venadito asomándose desde la derecha */
+
+#familia {
+    position: relative;
+    overflow: hidden;
+}
+
+.decoracion-venadito {
+    position: absolute;
+    width: 145px;
+    height: auto;
+    right: -15px;
+    top: 35%;
+    z-index: 1;
+    pointer-events: none;
+    animation: venaditoAsoma 4s ease-in-out infinite;
+}
+
+/* Venadito asomándose desde la derecha */
+
+#familia {
+    position: relative;
+    overflow: hidden;
+}
+
+.decoracion-venadito {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    right: -220px;
+    top: 15px;
+    z-index: 3;
+    pointer-events: none;
+    animation: venaditoAsoma 4s ease-in-out infinite;
+}
+
+@keyframes venaditoAsoma {
+
+    0%,
+    100% {
+        transform: translateX(45px);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .decoracion-venadito {
+        width: 150px;
+        right: -155px;
+        top: 10px;
+    }
+}
+
+/* Rama decorativa del evento */
+
+#evento {
+    position: relative;
+    overflow: hidden;
+}
+
+.decoracion-rama-evento {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    right: -210px;
+    bottom: 5px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@media (max-width: 600px) {
+    .decoracion-rama-evento {
+        width: 200px;
+        right: -130px;
+        bottom: 1px;
+    }
+}
+
+/* Tendedero de ropita de bebé */
+
+#vestimenta {
+    position: relative;
+    overflow: hidden;
+}
+
+.decoracion-tendedero {
+    position: absolute;
+    width: 230px;
+    height: auto;
+    top: 5px;
+    left: -35px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@media (max-width: 600px) {
+    .decoracion-tendedero {
+        width: 155px;
+        top: 5px;
+        left: -30px;
+    }
+}
+
+/* Avioncito viajero */
+
+#avioncitoViajero {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 75px;
+    height: auto;
+    z-index: 20;
+    pointer-events: none;
+    opacity: 0.9;
+    transform-origin: center center;
+}
+
+@media (max-width: 600px) {
+    #avioncitoViajero {
+        width: 55px;
+    }
+}
+
+/* Caballito de palo en la sección del evento */
+
+.decoracion-caballito {
+    position: absolute;
+    width: 145px;
+    height: auto;
+    left: -25px;
+    bottom: 5px;
+    z-index: 2;
+    pointer-events: none;
+    transform-origin: bottom center;
+    animation: balanceoCaballito 3s ease-in-out infinite;
+}
+
+@keyframes balanceoCaballito {
+
+    0%,
+    100% {
+        transform: rotate(-8deg);
+    }
+
+    50% {
+        transform: rotate(8deg);
+    }
+}
+
+
+@media (max-width: 600px) {
+    .decoracion-caballito {
+        width: 100px;
+        left: -20px;
+        bottom: 5px;
+    }
+}
+
+/* SECCIÓN DE PREDICCIÓN */
+#prediccion {
+    position: relative;
+    overflow: hidden;
+}
+
+.encabezado-prediccion {
+    max-width: 550px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.encabezado-prediccion h2 {
+    color: var(--cafe);
+    margin: 15px 0;
+}
+
+.encabezado-prediccion p {
+    color: var(--texto);
+    line-height: 1.8;
+}
+
+.opciones-prediccion {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.opcion-prediccion {
+    text-align: center;
+    padding: 20px 12px;
+    background: rgba(255, 253, 249, 0.75);
+    border-radius: 25px 10px 25px 10px;
+}
+
+.opcion-prediccion img {
+    width: 125px;
+    height: 145px;
+    object-fit: contain;
+    margin: 0 auto 12px;
+}
+
+.opcion-prediccion h3 {
+    color: var(--cafe);
+    font-size: 17px;
+    margin: 10px 0;
+}
+
+.opcion-prediccion p {
+    color: var(--texto);
+    font-size: 14px;
+}
+
+.nota-prediccion {
+    text-align: center;
+    color: var(--texto);
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 25px;
+}
+
+@media (max-width: 600px) {
+    .opciones-prediccion {
+        gap: 12px;
+    }
+
+    .opcion-prediccion {
+        padding: 15px 8px;
+    }
+
+    .opcion-prediccion img {
+        width: 100px;
+        height: 120px;
+    }
+
+    .opcion-prediccion h3 {
+        font-size: 14px;
+    }
+}
+
+.estrella-prediccion {
+    position: absolute;
+    width: 55px;
+    height: auto;
+    right: 25px;
+    top: 25px;
+    pointer-events: none;
+    animation: brilloEstrella 3s ease-in-out infinite;
+}
+
+@keyframes brilloEstrella {
+
+    0%,
+    100% {
+        transform: scale(0.9) rotate(-8deg);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: scale(1.15) rotate(8deg);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .estrella-prediccion {
+        width: 35px;
+        right: 10px;
+        top: 10px;
+    }
+}
+
+.foto-futuros-papas {
+    width: 85%;
+    max-width: 420px;
+    margin: 30px auto 10px;
+    padding: 9px;
+    background: var(--blanco);
+    border-radius: 25px 10px 25px 10px;
+    box-shadow: 0 8px 25px rgba(100, 75, 50, 0.15);
+}
+
+.foto-futuros-papas img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 18px 7px 18px 7px;
+}
+
+/* BOTÓN DE MÚSICA */
+.boton-musica {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(138, 114, 92, 0.3);
+    border-radius: 50%;
+    background: var(--blanco);
+    color: var(--cafe);
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.boton-musica.musica-activa {
+    animation: girarMusica 4s linear infinite;
+}
+
+@keyframes girarMusica {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .boton-musica {
+        width: 43px;
+        height: 43px;
+        right: 12px;
+        bottom: 12px;
+    }
+}

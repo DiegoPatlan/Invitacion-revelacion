@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Administración | Invitación</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <main class="contenedor-admin">
+
+        <section class="panel-login" id="panelLogin">
+
+            <div class="adorno">✦ UN DÍA ESPECIAL ✦</div>
+
+            <h1>Panel de administración</h1>
+
+            <p class="descripcion">
+                Bienvenidos al espacio privado de los futuros papás.
+                Aquí podrán consultar las confirmaciones de sus invitados.
+            </p>
+
+            <div class="separador">🤎</div>
+
+            <form id="formLogin">
+
+                <div class="campo">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" placeholder="Ingresa tu correo" autocomplete="username" required>
+                </div>
+
+                <div class="campo">
+                    <label for="contrasena">Contraseña</label>
+                    <input type="password" id="contrasena" placeholder="Ingresa tu contraseña"
+                        autocomplete="current-password" required>
+                </div>
+
+                <button type="submit" id="btnLogin">
+                    Iniciar sesión
+                </button>
+
+                <p id="mensajeLogin" role="status" aria-live="polite"></p>
+
+            </form>
+
+            <a href="../index.html" class="volver">
+                ← Volver a la invitación
+            </a>
+
+        </section>
+
+        <section id="panelDashboard" hidden>
+
+            <header class="encabezado-dashboard">
+                <div>
+                    <span class="adorno">✦ EVENTO ESPECIAL ✦</span>
+                    <h1>Confirmaciones</h1>
+                    <p>Panel privado de los futuros papás</p>
+                </div>
+
+                <button type="button" id="btnCerrarSesion">
+                    Cerrar sesión
+                </button>
+            </header>
+
+            <!-- ESTADÍSTICAS -->
+            <div class="estadisticas">
+
+                <article class="tarjeta-estadistica">
+                    <span>Total de respuestas</span>
+                    <strong id="totalRespuestas">0</strong>
+                </article>
+
+                <article class="tarjeta-estadistica">
+                    <span>Confirmaron asistencia</span>
+                    <strong id="totalConfirmados">0</strong>
+                </article>
+
+                <article class="tarjeta-estadistica">
+                    <span>No asistirán</span>
+                    <strong id="totalNoAsisten">0</strong>
+                </article>
+
+                <article class="tarjeta-estadistica">
+                    <span>Total de asistentes</span>
+                    <strong id="totalAsistentes">0</strong>
+                </article>
+
+            </div>
+
+            <!-- LISTADO DE INVITADOS -->
+            <div class="contenedor-confirmaciones">
+
+                <div class="encabezado-listado">
+                    <div>
+                        <h2>Lista de invitados</h2>
+                        <p>Respuestas registradas para el evento</p>
+                    </div>
+
+                    <button type="button" id="btnActualizar">
+                        Actualizar
+                    </button>
+                </div>
+
+                <div class="tabla-scroll">
+
+                    <table class="tabla-confirmaciones">
+
+                        <thead>
+                            <tr>
+                                <th>Invitado</th>
+                                <th>Asistencia</th>
+                                <th>Acompañantes</th>
+                                <th>Mensaje</th>
+                                <th>Fecha de respuesta</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tablaInvitados">
+                            <tr>
+                                <td colspan="5">Cargando confirmaciones...</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <p id="mensajeDashboard" role="status" aria-live="polite"></p>
+
+            </div>
+
+            <!-- VENTANA PARA LEER MENSAJES -->
+            <div id="modalMensaje" class="modal-mensaje" hidden>
+
+                <div class="contenido-modal-mensaje">
+
+                    <button type="button" id="cerrarModalMensaje" class="cerrar-modal" aria-label="Cerrar ventana">
+                        &times;
+                    </button>
+
+                    <span class="adorno">✦ MENSAJE ESPECIAL ✦</span>
+
+                    <h2 id="tituloMensaje">Mensaje del invitado</h2>
+
+                    <p id="textoMensaje"></p>
+
+                    <button type="button" id="btnCerrarMensaje" class="boton-cerrar-mensaje">
+                        Cerrar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase.js"></script>
+
+    <!-- Administración -->
+    <script src="admin.js"></script>
+
+</body>
+
+</html>
