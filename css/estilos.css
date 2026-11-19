@@ -1042,14 +1042,6 @@ button:hover,
 }
 
 
-/* Venadito asomándose desde la derecha */
-
-#familia {
-    position: relative;
-    overflow: hidden;
-
-}
-
 .decoracion-venadito {
     position: absolute;
     width: 300px;
@@ -1099,7 +1091,7 @@ button:hover,
     .decoracion-venadito {
         width: 150px;
         right: -100px;
-        top: -320px;
+        top: -190px;
     }
 }
 
