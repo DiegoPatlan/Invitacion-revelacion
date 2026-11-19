@@ -1519,3 +1519,368 @@ button:hover,
         filter: blur(1px);
     }
 }
+
+/*ANIMACIONES TEXTOS*/
+
+/* ANIMACIONES DE PORTADA */
+
+.texto-invitacion {
+    opacity: 0;
+    animation: aparecerTexto 0.8s ease 0.3s forwards;
+}
+
+.titulo-escritura {
+    opacity: 0;
+    animation: aparecerTitulo 1s ease 0.8s forwards;
+}
+
+.texto-secundario {
+    opacity: 0;
+    animation: aparecerTexto 1s ease 1.6s forwards;
+}
+
+@keyframes aparecerTexto {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes aparecerTitulo {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ajuste para celulares */
+@media (max-width: 600px) {
+    .titulo-escritura {
+        white-space: normal;
+        border-right: none;
+        animation: aparecerTexto 1.5s ease 1.5s both;
+    }
+}
+
+/* ANIMACIONES DE BIENVENIDA */
+
+.animacion-bienvenida-1 {
+    opacity: 0;
+    animation: bienvenidaSuave 1s ease 0.2s forwards;
+}
+
+.animacion-bienvenida-2 {
+    opacity: 0;
+    animation: bienvenidaEscala 1s ease 0.8s forwards;
+}
+
+.animacion-bienvenida-3 {
+    opacity: 0;
+    animation: bienvenidaSubir 1s ease 1.5s forwards;
+}
+
+@keyframes bienvenidaSuave {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bienvenidaEscala {
+    from {
+        opacity: 0;
+        transform: scale(0.94);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bienvenidaSubir {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ANIMACIONES NUESTRA FAMILIA AL HACER SCROLL */
+
+.anim-familia-1,
+.anim-familia-2,
+.anim-familia-3,
+.anim-familia-4,
+.anim-familia-5,
+.anim-familia-6,
+.anim-familia-7,
+.anim-familia-8 {
+    opacity: 0;
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.anim-familia-1 {
+    transform: translateY(15px);
+}
+
+.anim-familia-2 {
+    transform: scale(0.92);
+}
+
+.anim-familia-3 {
+    transform: translateY(20px);
+}
+
+.anim-familia-4 {
+    transform: translateX(-25px);
+}
+
+.anim-familia-5 {
+    transform: translateX(25px);
+}
+
+.anim-familia-6 {
+    transform: scale(0.6);
+}
+
+.anim-familia-7 {
+    transform: translateY(25px);
+}
+
+.anim-familia-8 {
+    transform: translateY(20px);
+}
+
+/* ACTIVAR ANIMACIÓN */
+
+.anim-familia-1.visible,
+.anim-familia-2.visible,
+.anim-familia-3.visible,
+.anim-familia-4.visible,
+.anim-familia-5.visible,
+.anim-familia-6.visible,
+.anim-familia-7.visible,
+.anim-familia-8.visible {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+}
+
+/* ANIMACIONES CUENTA REGRESIVA */
+
+.anim-contador-1,
+.anim-contador-2,
+.anim-contador-3,
+.anim-contador-4,
+.anim-contador-5,
+.anim-contador-6 {
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.anim-contador-1 {
+    transform: translateY(-20px);
+}
+
+.anim-contador-2 {
+    transform: translateY(20px);
+}
+
+.anim-contador-3,
+.anim-contador-4,
+.anim-contador-5,
+.anim-contador-6 {
+    transform: scale(0.85);
+}
+
+.anim-contador-1.visible,
+.anim-contador-2.visible,
+.anim-contador-3.visible,
+.anim-contador-4.visible,
+.anim-contador-5.visible,
+.anim-contador-6.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Pequeños retrasos entre los números */
+.anim-contador-4.visible {
+    transition-delay: 0.12s;
+}
+
+.anim-contador-5.visible {
+    transition-delay: 0.24s;
+}
+
+.anim-contador-6.visible {
+    transition-delay: 0.36s;
+}
+
+/* ANIMACIONES DETALLES DEL EVENTO */
+
+.anim-evento-1,
+.anim-evento-2,
+.anim-evento-3,
+.anim-evento-4,
+.anim-evento-5 {
+    opacity: 0;
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.anim-evento-1 {
+    transform: translateY(-20px);
+}
+
+.anim-evento-2 {
+    transform: translateY(15px);
+}
+
+.anim-evento-3 {
+    transform: translateX(-25px);
+}
+
+.anim-evento-4 {
+    transform: scale(0.85);
+}
+
+.anim-evento-5 {
+    transform: translateX(25px);
+}
+
+.anim-evento-1.visible,
+.anim-evento-2.visible,
+.anim-evento-3.visible,
+.anim-evento-4.visible,
+.anim-evento-5.visible {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+}
+
+/* ANIMACIONES AL DESPLAZARSE - VESTIMENTA */
+
+.anim-vestimenta-1,
+.anim-vestimenta-2,
+.anim-vestimenta-3,
+.anim-vestimenta-4 {
+    opacity: 0;
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.anim-vestimenta-1 {
+    transform: translateY(-20px);
+}
+
+.anim-vestimenta-2 {
+    transform: translateY(20px);
+}
+
+.anim-vestimenta-3 {
+    transform: scale(0.85);
+}
+
+.anim-vestimenta-4 {
+    transform: translateY(25px);
+}
+
+.anim-vestimenta-1.visible,
+.anim-vestimenta-2.visible,
+.anim-vestimenta-3.visible,
+.anim-vestimenta-4.visible {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+}
+
+.anim-vestimenta-2.visible {
+    transition-delay: 0.15s;
+}
+
+.anim-vestimenta-3.visible {
+    transition-delay: 0.3s;
+}
+
+.anim-vestimenta-4.visible {
+    transition-delay: 0.45s;
+}
+
+/* ANIMACIONES AL DESPLAZARSE - UBICACIÓN */
+
+.anim-ubicacion-1,
+.anim-ubicacion-2,
+.anim-ubicacion-3,
+.anim-ubicacion-4,
+.anim-ubicacion-5,
+.anim-ubicacion-6 {
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.anim-ubicacion-1 {
+    transform: translateY(15px);
+}
+
+.anim-ubicacion-2 {
+    transform: scale(0.9);
+}
+
+.anim-ubicacion-3 {
+    transform: translateY(20px);
+}
+
+.anim-ubicacion-4 {
+    transform: scale(0.92);
+}
+
+.anim-ubicacion-5 {
+    transform: translateY(15px);
+}
+
+.anim-ubicacion-6 {
+    transform: translateX(-20px);
+}
+
+.anim-ubicacion-1.visible,
+.anim-ubicacion-2.visible,
+.anim-ubicacion-3.visible,
+.anim-ubicacion-4.visible,
+.anim-ubicacion-5.visible,
+.anim-ubicacion-6.visible {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+}
+
+.anim-ubicacion-2.visible {
+    transition-delay: 0.15s;
+}
+
+.anim-ubicacion-3.visible {
+    transition-delay: 0.3s;
+}
+
+.anim-ubicacion-4.visible {
+    transition-delay: 0.2s;
+}
+
+.anim-ubicacion-5.visible {
+    transition-delay: 0.35s;
+}
+
+.anim-ubicacion-6.visible {
+    transition-delay: 0.45s;
+}
