@@ -1046,6 +1046,12 @@ button:hover,
     margin-bottom: 0;
 }
 
+@media (max-width: 600px) {
+    #familia {
+        height: 1100px;
+    }
+}
+
 /* Venadito asomándose desde la derecha */
 .decoracion-venadito {
     position: absolute;
