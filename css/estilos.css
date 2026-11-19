@@ -1101,7 +1101,7 @@ button:hover,
     .decoracion-rama-evento {
         width: 175px;
         right: -110px;
-        bottom: 5px;
+        bottom: -20px;
     }
 }
 
