@@ -446,7 +446,7 @@ button:hover,
     .gatito {
         width: 55px;
         height: 55px;
-        offset-path: inset(-60px round 18px);
+        offset-path: inset(-10px round 18px);
     }
 }
 
